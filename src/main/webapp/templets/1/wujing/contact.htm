@@ -1,0 +1,180 @@
+﻿<!--* 联系我们- */-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <#include "head-file.htm">
+<body>
+    <#include "head.htm">
+    <!-- 内页banner -->
+    <div class="hg20-color"></div>
+    <!-- /内页banner -->
+    <div class="back-color">
+        <div class="container">
+            <div class="con-left fl">
+                <div class="subcat">
+                    <div class="sub-tit">
+                        <h3>{ms:channel type=self typeid=19}[field.typetitle/]{/ms:channel}</h3>
+                        <span class="ar"></span>
+                    </div>
+                    <ul>
+                        <li class="cursor" data-i="1" data-anchor="contact-13">
+                            <i></i>
+                            <a href="javascript:;">联系方式</a>
+                        </li>
+                        <li class="cursor" data-anchor="contact-14">
+                            <i></i>
+                            <a href="javascript:;">地理位置</a>
+                        </li>
+                        <li class="cursor" data-anchor="contact-15">
+                            <i></i>
+                            <a href="javascript:;">在线留言</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subtac">
+                    <p>咨询热线：</p>
+                    <strong class="ar">888-8888888</strong>
+                </div>
+            </div>
+            <div class="con-right fr">
+                <div class="current">
+                    <div class="curr-left fl">
+                        <h3>{ms:channel type=self typeid=19}[field.typetitle/]{/ms:channel}</h3>
+                    </div>
+                    <div class="curr-right fr">
+                        <p>您当前的位置：
+                            <a class="home" href="{ms:global.host/}">首页</a>
+                            <a href="{ms:global.url/}/19/index.html">
+                                {ms:channel type=self typeid=19}
+                                    [field.typetitle/]
+                                {/ms:channel}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="page-about">
+                    <div class="detail after">
+                        <div class="contactus-order">
+                            <a class="contact-13"></a>
+                            <div class="contact-us after">
+                                <div class="us-left fl">
+                                    <img width="444" src="{ms:global.host/}/{ms:global.style/}/images/58cb92b84e6c2_1.jpg" alt="联系方式" />
+                                </div>
+                                <div class="us-right fr">
+                                    <h5>联系方式</h5>
+                                    <p class="desc">
+                                        MS成功的秘诀之一就是“艰苦创业、无私奉献、努力拼搏、开拓进取”的企业精神，
+                                        是全体MS人的思想成果和精神力量，在企业发展过程中得到不断完善和升华，永远都不会过时。
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span>联系电话</span>
+                                            <p>888-8888888</p>
+                                        </li>
+                                        <li>
+                                            <span>联系邮箱</span>
+                                            <p>QQ:88888888</p>
+                                        </li>
+                                        <li>
+                                            <span>公司地址</span>
+                                            <p>来自火星的程序猿</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactus-order">
+                            <a class="contact-14"></a>
+                            <h5 class="head-tit">地理位置</h5>
+                            <div class="sector_content n-back-1">                               
+                                <div class="Map wow slideInUp">
+                                    <div id="allmap" style="overflow:hidden;zoom:1;position:relative;">
+                                        <iframe src="http://cdn.mingsoft.net/global/map.htm?wmode=transparent&;wmode=transparent"
+                                            id="ifrm" name="ifrm" width="100%" height="320" frameborder="0" scrolling="no"
+                                            onload="document.all('ifrm').style.height=ifrm.document.body.scrollHeight+30;">
+                                        </iframe>
+                                        <div id="map" style="height:100%;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contactus-order">
+                            <a class="contact-15"></a>
+                            <h5 class="head-tit">在线留言</h5>
+                            <div class="feedback">
+                                <form method="post" id="Usezanform">
+                                    <div class="feedback-list">
+                                        <ul>
+                                            <li> 
+                                                <label>你的名字</label> 
+                                                <input type="text" name="username" placeholder="请输入名字" datatype="*2-15" nullmsg="名字不能为空" errormsg="名字格式为2-15个字符" />
+                                            </li>
+                                            <li> 
+                                                <label>常用电话</label> 
+                                                <input type="text" name="tel" placeholder="请输入电话" datatype="*5-15" nullmsg="电话不能为空" errormsg="电话格式为3-15个字符" />
+                                            </li>
+                                            <li>
+                                                <label>常用QQ</label>
+                                                <input type="text" name="qq" placeholder="请输入QQ" ignore="ignore" datatype="*4-15" nullmsg="QQ不能为空" errormsg="QQ格式为4-15个数字" />
+                                            </li>
+                                            <li class="textarea">
+                                                <textarea name="content" placeholder="请输入留言内容" datatype="*5-255" nullmsg="内容不能为空" errormsg="内容格式为5-255个字符">
+                                                </textarea>
+                                            </li>
+                                            <li class="submit">
+                                                <span class="error-hide"></span> 
+                                                <input type="hidden" name="title" value="在线留言" />
+                                                <input type="submit" class="input-submit"value="提交留言" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hg15"></div>
+    </div>
+    <!-- 页脚 -->
+    <#include "footer.htm">
+    <!-- /页脚 -->
+    <script type="text/javascript">
+        $(function () {
+            $(".subcat ul li").on("click", function () {
+                var offsettop;
+                var anchor = $(this).attr("data-anchor"),
+                    datai = $(this).attr("data-i");
+                (datai == 1) ? offsettop = $("." + anchor).offset().top - 90 : offsettop = $("." + anchor).offset().top;
+                $("body,html").animate({
+                    scrollTop: offsettop
+                }, 700);
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            //留言评论表单
+            $("#Usezanform").Validform({
+                ajaxPost: true,
+                tiptype: function (a, o, b) {
+                    var c = $(".error-hide");
+                    b(c, o.type);
+                    c.html(a);
+                },
+                callback: function (data) {
+                    if (data.status == "y") {
+                        $(".error-hide").html(data.info);
+                        $(".input-submit").attr('disabled', true);
+                        setTimeout(function () {
+                            $(".input-submit").attr('disabled', false);
+                        }, 1500);
+                    } else {
+                        $(".error-hide").html(data.info);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

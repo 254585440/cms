@@ -1,0 +1,92 @@
+﻿<!--* 新闻列表- */-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <#include "head-file.htm">
+<body>
+  <#include "head.htm">
+  <!-- 内页banner -->
+  <div class="hg20-color"></div>
+  <!-- /内页banner -->
+  <div class="back-color">
+    <div class="container">
+      <div class="con-left fl">
+        <div class="subcat">
+          <div class="sub-tit">
+            <h3>
+              {ms:channel type=self typeid=59}
+                [field.typetitle/]
+              {/ms:channel}
+            </h3>
+            <span class="ar"></span>
+          </div>
+          <ul>
+            {ms:channel type=son typeid=59 class=detailMainLeftMenu_cur}
+              <li>
+                <i></i>
+                <a href="{ms:global.url/}[field.typelink/]" class="[field.class/]">[field.typetitle/]</a>
+              </li>
+            {/ms:channel}
+          </ul>
+        </div>
+        <div class="subtac">
+          <p>咨询热线：</p>
+          <strong class="ar">888-888888</strong>
+        </div>
+      </div>
+      <div class="con-right fr">
+        <div class="current">
+          <div class="curr-left fl">
+            <h3>{ms:field.typetitle/} </h3>
+          </div>
+          <div class="curr-right fr">
+            <p>
+              您当前的位置：
+              <a class="home" href={ms:global.host/}>首页</a>
+              <a href="{ms:global.url/}/59/index.html">
+                {ms:channel type=self typeid=59}
+                  [field.typetitle/]
+                {/ms:channel}
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="news-list">
+          <ul>
+            {ms:arclist typeid=59 ispaging=true size=9}
+            <li>
+              <a target="_self" href="{ms:global.url/}[field.link/]">
+                <img width="180" class="fl" src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" />
+                <h5>[field.title/]</h5>
+                <p class="time-sour">
+                  <span>发布时间：[field.date?string("yyyy-MM-dd")/]</span>
+                </p>
+                <p class="reamk">[field.descrip/]</p>
+              </a> 
+            </li>
+            {/ms:arclist}
+          </ul>
+          <div class="pages">
+            <a href="{ms:global.url/}/{ms:page.index/}">首页</a>
+            <a href="{ms:global.url/}/{ms:page.pre/}">上一页</a>
+            <a href="{ms:global.url/}/{ms:page.next/}">下一页</a>
+            <a href="{ms:global.url/}/{ms:page.last/}">末页</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hg15"></div>
+  </div>
+  <!-- /子菜单 -->
+  <script type="text/javascript">
+    $('.subcate ul li').removeAttr('class')
+    var address = window.location.href
+    if (address.match('/59/68/')) {
+      $('.subcat ul li:eq(0)').attr('class', 'on')
+    } else if (address.match('/59/69/')) {
+      $('.subcat ul li:eq(1)').attr('class', 'on')
+    } else if (address.match('/59/70/')) {
+      $('.subcat ul li:eq(2)').attr('class', 'on')
+    }
+  </script>
+</body>
+</html>

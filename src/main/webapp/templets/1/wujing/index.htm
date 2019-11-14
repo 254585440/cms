@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <#include "head-file.htm">
+<body>
+  <#include "head.htm">
+  <div class="container plate mt15">
+    <!-- 幻灯片 -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-lazy" data-background="{ms:global.host/}/{ms:global.style/}/images/2017041014394420283_1.jpg"
+          style="width:100%;min-width:805px;height:325px">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+        <div class="swiper-slide swiper-lazy" data-background="{ms:global.host/}/{ms:global.style/}/images/2017041014401183753_1.jpg"
+          style="width:100%;min-width:805px;height:325px">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- /幻灯片 -->
+    <script type="text/javascript">
+      $(function () {
+        var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          effect: "slide",
+          lazyLoading: true,
+          lazyLoadingInPrevNext: true,
+          lazyLoadingOnTransitionStart: true,
+          preventClicks: false,
+          autoplay: 500000,
+          autoplayDisableOnInteraction: false,
+          direction: "horizontal",
+          mousewheelControl: false,
+          mousewheelReleaseOnEdges: true,
+          keyboardControl: true,
+        });
+      })	
+    </script>
+    <div class="plate-news mb15 fr plate-white" style="background:#fff;">
+      <div class="title color">
+        <h3>
+          新闻动态
+          <span class="ar">NEWS</span>
+        </h3>
+        <a class="fr tit-more" href="{ms:global.url/}/59/index.html">更多</a>
+      </div>
+      <div class="plate-news-content">
+        <ul>
+          {ms:arclist typeid=59 size=1}
+            <li class="to-thumb after">
+              <a target="_self" href="{ms:global.url/}[field.link/]"> 
+                <img class="fl mr10" width="130" height="80" src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" />
+                <h5 class="f14">[field.title/]</h5>
+                <span class="time">[field.date?string("yyyy-MM-dd")/]</span>
+              </a> 
+            </li>           
+          {/ms:arclist}         
+          {ms:arclist typeid=59 size=5}
+            <li class="tit clear">
+              <a target="_self" href="{ms:global.url/}[field.link/]">
+                <h5>[field.title/]</h5>
+              </a>
+            </li>            
+          {/ms:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="plate-product mb15 clear plate-white" style="background:#fff;">
+      <div class="title">
+        <h3> 
+          {ms:channel type=self typeid=106}[field.typetitle/]{/ms:channel}
+          <div class="find-cat">
+              {ms:channel type=son typeid=106}
+                <a href="{ms:global.url/}[field.typelink/]">[field.typetitle/]</a> 
+              {/ms:channel}
+          </div>
+        </h3>
+      </div>
+      <div class="plate-product-content after">
+        <ul class="wul105">
+          {ms:arclist typeid=106 size=5}
+            <li>
+              <a class="open-layer" href="javascript:;"> 
+                <img width="100%" height="" src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" />
+                <h5>[field.title/]</h5>
+              </a>
+              <div class="pro-layer">
+                <div class="pro-layer-detail after">
+                  <img class="fl" width="470" src="{ms:global.host/}[field.litpic/]" alt="[field.title/]" />
+                  <div class="detail-right fr">
+                    <h5 class="pt10">[field.title/]</h5>
+                    <p class="type">关键词：[field.keyword/]</p>
+                    <div class="remark">
+                      [field.descrip/]
+                    </div>
+                    <div class="links">
+                      <a class="l-url" target="_blank" href="#">立即购买</a>
+                      <a class="l-url" target="_blank" href="{ms:global.url/}/19/index.html">咨询我们</a>
+                      <span class="pro-share">分享：
+                        <div class="bdsharebuttonbox">
+                          <a href="#" class="bds_more" data-cmd="more"></a>
+                          <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                          <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                          <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                          <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                          <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {/ms:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="plate-clint mb15 fr plate-white" style="background:#fff;">
+      <div class="title color">
+        <h3>
+          专家研究院
+          <span class="ar">EXPERT</span>
+        </h3>
+        <a class="fr tit-more" href="	{ms:global.url/}/115/index.html">更多</a>
+      </div>
+      <div class="plate-clint-content">
+        <ul class="wul105">
+          {ms:arclist typeid=115 size=4}
+            <li>
+              <a target="_self"><img src="{ms:global.host/}[field.litpic/]" alt="" />
+                <h5>[field.title/]</h5>
+              </a>
+            </li>            
+          {/ms:arclist} 
+        </ul>
+      </div>
+    </div>
+    <div class="plate-about fl mb15 plate-white" style="background:#fff;">
+      <div class="title">
+        <h3>
+          公司简介
+          <span class="ar">ABOUT</span>
+        </h3>
+        <a class="fr tit-more" href="{ms:global.url/}/93/94/index.html">更多</a>
+      </div>
+      <div class="plate-about-content">
+        <div class="fl">
+          <img width="300" height="245" src="{ms:global.host/}/{ms:global.style/}/images/58ec4f990839c_1.jpg"/>
+        </div>
+        <div class="intro fr">
+          {ms:arclist typeid=94}
+            <h5 class="f18">[field.fulltitle/]</h5>
+            <div class="intro-text f12">
+              [field.descrip/]
+            </div>
+          {/ms:arclist}
+        </div>
+      </div>
+    </div>
+    <div class="plate-contact fr mb15 plate-white" style="background:#fff;">
+      <div class="title color">
+        <h3>
+          联系我们
+          <span class="ar">CONTACT</span>
+        </h3>
+        <a class="fr tit-more" href="{ms:global.url/}/19/index.html">更多</a>
+      </div>
+      <div class="plate-contact-content after">
+        <img src="{ms:global.host/}/{ms:global.style/}/images/58d3383ecae4e_1.jpg" class="mb10" alt="联系我们" />
+        <p>咨询热线：888-8888888</p>
+        <p>电子邮箱：88888888@163.com</p>
+      </div>
+    </div>
+    <div class="plate-case fl mb15 plate-white" style="background:#fff;">
+      <div class="title">
+        <h3>
+          公司新闻
+          <span class="ar">NEWS</span>
+        </h3>
+        <a class="fr tit-more" href="{ms:global.url/}/59/index.html">更多</a>
+      </div>
+      <div class="plate-case-content after">
+        <ul class="wul105">
+          {ms:arclist typeid=68 size=4}
+            <li> 
+              <a target="_self" href="{ms:global.url/}[field.link/]"> 
+                <img class="fl" width="120" height="auto" src="{ms:global.host/}[field.litpic/]" alt="[field.title/]"/>
+                <h5 class="f14 bold">[field.title/]</h5>
+                <p>[field.keyword/]</p>
+              </a>
+            </li>         
+          {/ms:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <#include "footer.htm">
+  <script type="text/javascript">
+    $(function () {
+      $("a[rel=group]").fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'titlePosition': 'over',
+        'cyclic': true,
+        'titleFormat': function (title, currentArray, currentIndex, currentOpts) {
+          return '<span id="fancybox-title-over">' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+        }
+      });
+    })
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $(".open-layer").on("click", function () {
+        layer.open({
+          type: 1,
+          title: false,
+          skin: 'pro-layer-detail', //样式类名
+          closeBtn: 1, //不显示关闭按钮
+          anim: 2,
+          shadeClose: true, //开启遮罩关闭
+          content: $(this).next(".pro-layer").html(),
+          success: function (layero, index) {
+            var findH = layero.find(".pro-layer-detail");
+            maxH = findH.find("img").height() - findH.find("h5").outerHeight() - findH.find("p.type").height() - findH.find(".links").outerHeight() - 70;
+            layero.find(".remark").css("max-height", maxH);
+          }
+        });
+      });
+      window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    });
+  </script>
+</body>
+</html>

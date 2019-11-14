@@ -1,0 +1,133 @@
+﻿<!--* 产品列表- */-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <#include "head-file.htm">
+<body>
+  <#include "head.htm">
+  <!-- 内页banner -->
+  <div class="hg20-color"></div>
+  <!-- /内页banner -->
+  <div class="back-color">
+    <div class="container">
+      <div class="con-left fl">
+        <div class="subcat">
+          <div class="sub-tit">
+            <h3>{ms:channel type=self typeid=106}[field.typetitle/]{/ms:channel}</h3>
+            <span class="ar"></span>
+          </div>
+          <style>.detailMainLeftMenu_cur{color:#fff}</style>
+          <ul>
+            {ms:channel typeid=106 type=son class=detailMainLeftMenu_cur}
+              <li>
+                <i></i>
+                <a href="{ms:global.url/}[field.typelink/]" class="[field.class/]">[field.typetitle/]</a>
+              </li>
+            {/ms:channel}
+          </ul>
+        </div>
+        <div class="subtac">
+          <p>咨询热线：</p>
+          <strong class="ar">888-8888888</strong>
+        </div>
+      </div>
+      <div class="con-right fr">
+        <div class="current">
+          <div class="curr-left fl">
+            <h3>{ms:field.typetitle/} </h3>
+          </div>
+          <div class="curr-right fr">
+            <p>您当前的位置：
+              <a class="home" href="{ms:global.host/}">首页</a>
+              <a href="{ms:global.url/}/106/index.html">
+                {ms:channel type=self typeid=106}[field.typetitle/]{/ms:channel}
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="page-about after pb20">
+          <div class="product-list">
+            <ul class="wul105">
+              {ms:arclist typeid=106 ispaging=true size=9}
+                <li>
+                  <a href="javascript:;" class="open-layer" title="[field.title/]">
+                    <img width="289" height="180" src="{ms:global.host/}[field.litpic/]" alt=""/>
+                    <h5>[field.title/]</h5>
+                    <p class="type">[field.source/]</p>
+                    <span class="ico-detail"></span>
+                  </a>
+                  <div class="pro-layer">
+                    <div class="pro-layer-detail after">
+                      <img class="fl" width="470" src="{ms:global.host/}[field.litpic/]" />
+                      <div class="detail-right fr">
+                        <h5 class="pt10">[field.title/]</h5>
+                        <p class="type">关键词：[field.keyword/]</p>
+                        <div class="remark">
+                          [field.descrip/]
+                        </div>
+                        <div class="links">
+                          <a class="l-url" target="_blank" href="#">立即购买</a>
+                          <a class="l-url" target="_blank" href="{ms:global.url/}/19/index.html">咨询我们</a>
+                          <span class="pro-share">分享：
+                            <div class="bdsharebuttonbox">
+                              <a href="#" class="bds_more" data-cmd="more"></a>
+                              <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                              <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                              <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                              <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                              <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              {/ms:arclist}
+            </ul>
+            <div class="hgclear"></div>
+            <div class="pages">
+              <a href="{ms:global.url/}/{ms:page.index/}">首页</a>
+              <a href="{ms:global.url/}/{ms:page.pre/}">上一页</a>
+              <a href="{ms:global.url/}/{ms:page.next/}">下一页</a>
+              <a href="{ms:global.url/}/{ms:page.last/}">末页</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hg15"></div>
+  </div>
+  <#include "footer.htm">
+  <script type="text/javascript">
+    $(function () {
+      $(".open-layer").on("click", function () {
+        layer.open({
+          type: 1,
+          title: false,
+          skin: 'pro-layer-detail', //样式类名
+          closeBtn: 1, //不显示关闭按钮
+          anim: 2,
+          shadeClose: true, //开启遮罩关闭
+          content: $(this).next(".pro-layer").html(),
+          success: function (layero, index) {
+            var findH = layero.find(".pro-layer-detail");
+            maxH = findH.find("img").height() - findH.find("h5").outerHeight() - findH.find("p.type").height() - findH.find(".links").outerHeight() - 70;
+            layero.find(".remark").css("max-height", maxH);
+          }
+        });
+      });
+      window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    });
+  </script>
+  <!-- /子菜单 -->
+  <script type="text/javascript">
+    $('.subcate ul li').removeAttr('class')
+    var address = window.location.href
+    if (address.match('/106/107/')) {
+      $('.subcat ul li:eq(0)').attr('class', 'on')
+    } else if (address.match('/106/108/')) {
+      $('.subcat ul li:eq(1)').attr('class', 'on')
+    } 
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+.header,
+.footer{border-top: 5px solid #0a57ac}
+.header .search .subbth{background:#0a57ac url(../images/search.png) no-repeat center center;}
+.nav-all,
+.plate-white .title.color,
+.title.color,
+.plate-white .plate-news-content ul li.tit:hover:after,
+.title h3 .find-cat a:hover{background:#0a57ac;}
+.title.color{border-color:#0a57ac}
+.plate-white .plate-news-content ul li.to-thumb:hover h5,
+.plate-white .plate-news-content ul li.to-thumb:hover span.time,
+.plate-white .plate-news-content ul li.tit:hover h5,
+.plate-white .plate-product-content ul li:hover h5,
+.plate-white .plate-case-content ul li:hover h5,
+.plate-white .plate-clint-content ul li:hover h5{color:#0a57ac}
+/* 通用 */
+.con-left .subcat .sub-tit,.con-left .subcat ul li i,.nav ul li.on .childer,.pages a.curr,.pro-layer-detail .detail-right .links a.l-url{background:#0a57ac;}
+a:hover,.con-left .subcat ul li:hover a,.con-left .subcat ul li.on a,.con-left .subcat ul.subTree li.on .Treetwo li.onn a,
+.con-left .subcat ul.subTree li.on .Treetwo li a:hover,.nav ul li.on a,.nav ul li.on .childer a:hover,
+.con-left .subtac strong,.ques-list ul li.on h5,.ques-list ul li.on span.deta{color:#0a57ac;}
+.pages a.curr,.download-list ul li:hover,.team-list ul li:hover{border-color:#0a57ac;}
